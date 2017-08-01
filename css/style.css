@@ -62,10 +62,52 @@ body{
 	border:1px solid #eee;
 }
 
+.btn{
+	border:none;
+	border-radius:0;
+}
+
 .btn-primary{
 	background-color:#ff953f;
 }
 
 .btn:hover{
 	background:#ccc;
+}
+
+.post{
+	border:1px #ccc solid;
+	background:#fff;
+	margin-bottom:30px;
+}
+
+.post img{
+	width:100%;
+}
+
+.post-content{
+	padding:20px;
+	box-sizing:border-box;
+}
+
+.post h3{
+	margin:0;
+	padding:0;
+}
+
+.post small{
+	background:#36424a;
+	color:#fff;
+	display:block;
+	margin:10px 0;
+	padding:5px 10px;
+}
+
+footer{
+	background:#36424a;
+	color:#fff;
+	text-align:center;
+	height:60px;
+	padding-top:20px;
+	margin-top:30px;
 }
