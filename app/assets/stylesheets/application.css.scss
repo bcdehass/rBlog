@@ -10,12 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *****had to remove require_tree, because it will include all styling files and won't include the imports*****
+
+
  *= require_self
  */
 
-$color: red; 
 
-body{
-	background:$color;
-}
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'partials/variables'; 
+@import 'main';
