@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
+  get 'contact' => 'contacts#new'
 
   get 'contacts/create'
 
-  get 'about/index'
+  get 'about' => 'about#index'
 
-  namespace :admin do
-    get 'sessions/new'
+#these put admin controller in admin namespace (back end). in this case, if it doesn't say "namespace :admin", it's front end. 
+  namespace :admin do 
+    get 'sessions/new' #get 'controller/action'
   end
 
   namespace :admin do
@@ -109,5 +110,17 @@ Rails.application.routes.draw do
 
   get 'posts/show'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :posts, :categories, :comments #front end resources
+  resources "contacts", only: [:new, :create]
+
+  namespace :admin do #back end resources
+    resources :posts, :categories, :comments, :users
+  end
+
+  root 'posts#index' #set homepage
+
+
+
+ 
 end
+
