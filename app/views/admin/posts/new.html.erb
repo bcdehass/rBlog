@@ -36,6 +36,11 @@
 		<%= f.text_area :tags ,class:'form-control' %>
 	</div>
 	<br>
+	<div class="form-group">
+		<%= f.label :body %>
+		<%= f.text_area :body ,class:'form-control' %>
+	</div>
+	<br>
 	<%= f.submit "Submit", class:'btn btn-primary' %>
 	<%=link_to "Cancel", admin_posts_path, class:"btn btn-default" %>
 <% end %>
