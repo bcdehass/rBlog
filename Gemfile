@@ -38,6 +38,7 @@ gem 'autoprefixer-rails'
 gem 'bcrypt-ruby', :require => "bcrypt" #encrypts admin passwords
 gem 'mail_form'
 gem 'simple_form'
+gem 'will_paginate' 
 
 
 group :development, :test do
