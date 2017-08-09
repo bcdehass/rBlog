@@ -38,9 +38,9 @@ class Admin::CategoriesController < Admin::ApplicationController
 
 def index
     if params[:search]
-      @categories = Category.search(params[:search]).all.order('created_at DESC') 
+      @categories = Category.search(params[:search]).all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page]) 
     else
-      @categories = Category.all.order('created_at DESC') #sort by date create with the most recent first
+      @categories = Category.all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page]) #sort by date create with the most recent first
     end
   end
 
