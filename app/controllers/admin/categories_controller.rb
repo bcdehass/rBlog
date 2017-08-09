@@ -36,8 +36,12 @@ class Admin::CategoriesController < Admin::ApplicationController
       redirect_to admin_categories_path
   end
 
-  def index
-    @categories = Category.all
+def index
+    if params[:search]
+      @categories = Category.search(params[:search]).all.order('created_at DESC') 
+    else
+      @categories = Category.all.order('created_at DESC') #sort by date create with the most recent first
+    end
   end
 
   def show

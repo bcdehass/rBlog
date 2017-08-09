@@ -38,7 +38,11 @@ class Admin::UsersController < Admin::ApplicationController
   end
 
   def index
-    @users = User.all
+     if params[:search]
+      @users = User.search(params[:search]).all.order('created_at DESC') 
+    else
+      @users = User.all.order('created_at DESC') #sort by date create with the most recent first
+    end
   end
 
   def show

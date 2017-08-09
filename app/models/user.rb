@@ -23,4 +23,8 @@ class User < ApplicationRecord
 			self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
 		end
 	end
+
+	def self.search(query)
+		where("name like ? OR email like ?", "%#{query}%", "%#{query}%") #search title and body 
+	end
 end
