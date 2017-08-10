@@ -39,6 +39,7 @@ gem 'bcrypt-ruby', :require => "bcrypt" #encrypts admin passwords
 gem 'mail_form'
 gem 'simple_form'
 gem 'will_paginate' 
+gem "paperclip", "~> 5.0.0"
 
 
 group :development, :test do

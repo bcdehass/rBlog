@@ -38,9 +38,9 @@ class Admin::PostsController < Admin::ApplicationController
 
   def index
     if params[:search]
-      @posts = Post.search(params[:search]).all.order('created_at DESC').paginate(:per_page => 2, :page => params[:page])
+      @posts = Post.search(params[:search]).all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page])
     else
-      @posts = Post.all.order('created_at DESC').paginate(:per_page => 2, :page => params[:page]) #sort by date create with the most recent first
+      @posts = Post.all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page]) #sort by date create with the most recent first
     end
   end
 
