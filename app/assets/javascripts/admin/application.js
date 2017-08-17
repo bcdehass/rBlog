@@ -12,4 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require froala_editor.min.js
+
+$('selector').froalaEditor();
 //= require_tree .
