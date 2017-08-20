@@ -10,9 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require froala_editor.min.js
 //= require rails-ujs
 //= require turbolinks
 //= require froala_editor.min.js
+//= require_tree .
+
+
+
 
 $('selector').froalaEditor();
-//= require_tree .
+
+$(function() {
+  $('textarea#froala-editor').froalaEditor()
+});

@@ -11,14 +11,14 @@
  * It is generally better to create a new file per style scope.
  *
  
- *= require_self
- */
+*= require_self
+*= froala_editor.min.css
+*= froala_style.min.css
+*= font-awesome-sprockets
+*= font-awesome
+ 
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'partials/variables';
 @import 'main';
-@import "froala_editor.min.css";
-@import "froala_style.min.css";
-@import "font-awesome-sprockets";
-@import "font-awesome";
