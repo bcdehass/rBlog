@@ -19,8 +19,4 @@
 
 
 
-$('selector').froalaEditor();
 
-$(function() {
-  $('textarea#froala-editor').froalaEditor()
-});
