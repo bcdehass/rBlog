@@ -101,7 +101,12 @@ body{
 	padding:0;
 }
 
-.post small{
+.post .btn{
+	display:block; 
+	margin-top:20px;
+}
+
+small{
 	background:$primary-color;
 	color:#fff;
 	display:block;

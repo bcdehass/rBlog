@@ -5,5 +5,9 @@ class PostsController < ApplicationController
   end
 
   def show
+  	@post = Post.find(params[:id])
+  	@categories = Category.all 
+  	@comment = Comment.new
+  	@comments = Comment.all
   end
 end
