@@ -110,12 +110,16 @@ Rails.application.routes.draw do
 
   get 'posts/show'
 
-  resources :posts, :categories, :comments #front end resources
+  resources :posts, :categories #front end resources
   resources "contacts", only: [:new, :create]
 
   namespace :admin do #back end resources
-    resources :posts, :categories, :comments, :users
+    resources :posts, :categories, :comments, :users, :sessions
   end
+
+  resources :posts do #comments should only exist with posts
+    resources :comments
+  end   
 
   root 'posts#index' #set homepage
 
