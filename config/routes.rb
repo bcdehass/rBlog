@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
 #these put admin controller in admin namespace (back end). in this case, if it doesn't say "namespace :admin", it's front end. 
   namespace :admin do 
-    get 'sessions/new' #get 'controller/action'
+    get 'login' => 'sessions#new', :as => 'login' #get 'controller/action'
   end
 
   namespace :admin do
