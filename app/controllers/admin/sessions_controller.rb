@@ -12,5 +12,5 @@ class Admin::SessionsController < Admin::ApplicationController
   		flash.now.alert = "Invalid email or password" #using this style of flash because it's a render, not a redirect
   		render 'new'
   	end
-  end
+  end 
 end
