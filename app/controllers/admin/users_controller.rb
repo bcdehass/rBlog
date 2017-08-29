@@ -1,7 +1,4 @@
-class Admin::UsersController < Admin::ApplicationControllerbefore_action 
-
-  before_action :verify_logged_in
-  
+class Admin::UsersController < Admin::ApplicationController
   def new
     @page_title = 'Add User'
     @user = User.new 

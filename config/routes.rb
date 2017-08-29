@@ -10,10 +10,6 @@ Rails.application.routes.draw do
     get "login" => "sessions#new", :as => "login" #get 'controller/action'
   end
 
-  namespace :admin do 
-    get "logout" => "sessions#destroy", :as => "logout" #get 'controller/action'
-  end
-
   namespace :admin do
     get 'sessions/create'
   end

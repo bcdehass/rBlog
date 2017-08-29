@@ -1,6 +1,4 @@
 class Admin::PostsController < Admin::ApplicationController
-  before_action :verify_logged_in #redirects to login page if someone tries to access admin side without credentials 
-
   def new
     @page_title = 'Add Post'
     @post = Post.new 
