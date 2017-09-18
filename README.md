@@ -1,24 +1,5 @@
-# README
+UDEMY RAILS TUTORIAL- BlOG PROJECT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project from an RoR tutorial on Udemy called “Learn Ruby on Rails By Building Projects”, by Eduonix Learning Solutions. It is for my education and isn't something I made myself.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rails Blog with admin features
